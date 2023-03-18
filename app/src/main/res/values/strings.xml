@@ -2,9 +2,12 @@
     <string name="APP_NAME">Music_Player</string>
     <string name="MUSIC">Music</string>
     <string name="AUTHOR">Author</string>
-    <string name="NAV_HOME">Home</string>
-    <string name="NAV_SEARCH">Search</string>
-    <string name="NAV_PLAY_LIST">Play List</string>
-    <string name="NAV_RECORD">Record</string>
+    <string name="HOME">Home</string>
+    <string name="SEARCH">Search</string>
+    <string name="PLAY_LIST">Play List</string>
+    <string name="RECORD">Record</string>
     <string name="GET_START">Get Started</string>
+    <string name="LIBRARY">Library</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
