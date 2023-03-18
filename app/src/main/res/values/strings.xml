@@ -1,0 +1,9 @@
+<resources>
+    <string name="APP_NAME">Music_Player</string>
+    <string name="MUSIC">Music</string>
+    <string name="AUTHOR">Author</string>
+    <string name="NAV_HOME">Home</string>
+    <string name="NAV_SEARCH">Search</string>
+    <string name="NAV_PLAY_LIST">Play List</string>
+    <string name="NAV_RECORD">Record</string>
+</resources>
