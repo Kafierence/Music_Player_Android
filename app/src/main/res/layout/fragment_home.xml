@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_grey"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@color/light_grey"
+        android:alpha="0.8"
+        android:text="Home"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:padding="1dp"
+                        android:text="Top Songs"/>
+
+                    <TextView
+                        android:id="@+id/top_songs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="#ABABAB"
+                        android:textSize="12sp"
+                        android:padding="1dp"
+                        android:text="Get better recommendations the more you listen"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/song_img_1"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_below="@id/top_songs"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_song_1"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@+id/song_img_1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/song_name_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Boicity"
+                                    android:textColor="@color/white"
+                                    android:textSize="23dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+
+                                <TextView
+                                    android:id="@+id/singer1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/song_name_1"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="ThienZ"
+                                    android:textColor="@color/white"
+                                    android:textSize="17dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/song_img_2"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_below="@id/top_songs"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_song_2"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@+id/song_img_1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/song_name_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Em của ngày hôm qua"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+
+                                <TextView
+                                    android:id="@+id/singer2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/song_name_1"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Sơn Tùng MTP"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/song_img_3"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_below="@id/top_songs"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_song_3"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@+id/song_img_1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/song_name_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Big City Boi"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+
+                                <TextView
+                                    android:id="@+id/singer3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/song_name_1"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Binz"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/song_img_4"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_below="@id/top_songs"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_song_4"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@+id/song_img_1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/song_name_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Bên trên tầng lầu"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+
+                                <TextView
+                                    android:id="@+id/singer4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/song_name_1"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Tăng Duy Tân"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/top_artists"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:padding="1dp"
+                        android:text="Top Artists"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/ava1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                app:cardCornerRadius="50dp"
+                                android:layout_below="@id/top_artists"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_song_1"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/singername1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/album1"
+                                    android:text="ThienZ"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/ava2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_below="@id/top_artists"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                app:cardCornerRadius="50dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/singer2"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/singername2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Sơn Tùng MTP"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/ava3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_below="@id/top_artists"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                app:cardCornerRadius="50dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/singer3"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/singername3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Binz"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/top_albums"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:padding="1dp"
+                        android:text="Top Albums"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/album1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_below="@id/top_albums"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                app:cardCornerRadius="15dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_album1"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/name1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Album mùa mưa"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/album2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_below="@id/top_albums"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                app:cardCornerRadius="15dp">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_album2"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/name2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Boi cháy phố"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/album3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_below="@id/top_albums"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="20dp"
+                                app:cardCornerRadius="15dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_album3" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/name3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/album1"
+                                    android:text="Album dance"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>
