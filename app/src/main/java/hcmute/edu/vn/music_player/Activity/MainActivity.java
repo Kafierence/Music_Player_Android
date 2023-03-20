@@ -2,13 +2,10 @@ package hcmute.edu.vn.music_player.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
+
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TabHost;
-import android.widget.TabWidget;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -32,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper, homeFragment).commit();
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        ImageView imageView = findViewById(R.id.ava_search_result);
-        Glide.with(this).load(R.drawable.sontung).circleCrop().into(imageView);
 
         //setting action when loading content layout
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -41,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper,homeFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper, homeFragment).commit();
                         return true;
                     case R.id.nav_search:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper,searchFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper, searchFragment).commit();
                         return true;
                     case R.id.nav_library:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper,libraryFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper, libraryFragment).commit();
                         return true;
 
                 }
