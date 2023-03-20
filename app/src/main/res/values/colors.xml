@@ -10,4 +10,6 @@
     <color name="light_grey">#515151</color>
     <color name="green">#1ED760</color>
 
+    <color name="colorBottomNavBar">#282828</color>
+    <color name="colorNavIcon">#ABABAB</color>
 </resources>
