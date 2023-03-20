@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper, homeFragment).commit();
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        ImageView imageView = findViewById(R.id.ava_search_result);
+        Glide.with(this).load(R.drawable.sontung).circleCrop().into(imageView);
 
         //setting action when loading content layout
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
