@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Sơn Tùng" />
+
+    <RelativeLayout
+        android:id="@+id/actor"
+        android:layout_below="@id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/grey"
+        android:alpha="0.5"/>
+    <ImageView
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/search_result"
+        android:id="@+id/ava_search_result"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="@drawable/round_bg"
+        android:src="@drawable/sontung"/>
+
+    <TextView
+        android:id="@+id/name_actor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ava_search_result"
+        android:layout_below="@id/search_result"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="16dp"
+        android:text="Sơn Tùng M-TP"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/decription_actor"
+        android:layout_below="@id/name_actor"
+        android:text="Nghệ Sĩ - 2.4M quan tâm"
+        android:layout_toRightOf="@id/ava_search_result"
+        android:layout_marginLeft="8dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/actor"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        app:cardCornerRadius="15dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/skytour"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_toRightOf="@id/cardview1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/actor"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="15dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tuyentap"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview3"
+        android:layout_toRightOf="@id/cardview2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/actor"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="15dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/skyler"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview1"
+        android:text="Sky Tour List"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="33dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="6dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/name1"
+        app:cardCornerRadius="11dp"
+        android:layout_marginTop="33dp">
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:id="@+id/avasong1"
+            android:layout_height="match_parent"
+            android:src="@drawable/chayngaydi"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="6dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/song1"
+        app:cardCornerRadius="11dp"
+        android:layout_marginTop="14dp">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ccyld" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="6dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/song2"
+        app:cardCornerRadius="11dp"
+        android:layout_marginTop="14dp">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/muonroi" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="6dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/song3"
+        app:cardCornerRadius="11dp"
+        android:layout_marginTop="14dp">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/htca" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="6dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/song4"
+        app:cardCornerRadius="11dp"
+        android:layout_marginTop="14dp">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/eng" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview2"
+        android:layout_toRightOf="@id/cardview1"
+        android:text="Tuyển Tập Nhạc Hay"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="23dp"/>
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview3"
+        android:layout_toRightOf="@id/cardview2"
+        android:text="Album Skyler"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"/>
+    <RelativeLayout
+        android:id="@+id/song1"
+        android:alpha="0.1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/name1"
+        android:background="@color/Grey"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"/>
+    <RelativeLayout
+        android:id="@+id/song2"
+        android:alpha="0.1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/song1"
+        android:background="@color/Grey"
+        android:layout_marginTop="12dp"
+        android:layout_height="50dp"/>
+    <RelativeLayout
+        android:id="@+id/song3"
+        android:alpha="0.1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/song2"
+        android:background="@color/Grey"
+        android:layout_marginTop="12dp"
+        android:layout_height="50dp"/>
+
+    <RelativeLayout
+        android:id="@+id/song4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/song3"
+        android:layout_marginTop="12dp"
+        android:alpha="0.1"
+        android:background="@color/Grey" />
+
+    <RelativeLayout
+        android:id="@+id/song5"
+        android:alpha="0.1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/song4"
+        android:background="@color/Grey"
+        android:layout_marginTop="12dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/name_song_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chạy Ngay Đi"
+        android:textSize="18dp"
+        android:layout_below="@id/name1"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="61dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_song_1"
+        android:layout_marginLeft="61dp"
+        android:text="Sơn Tùng M-TP"/>
+    <TextView
+        android:id="@+id/name_song_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Có Chắc Yêu Là Đây"
+        android:layout_below="@id/name_song_1"
+        android:layout_marginTop="37dp"
+        android:textSize="17dp"
+        android:layout_marginLeft="61dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_song_2"
+        android:layout_marginLeft="61dp"
+        android:text="Sơn Tùng M-TP"/>
+    <TextView
+        android:id="@+id/name_song_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muộn Rồi Mà Sao Còn"
+        android:layout_below="@id/name_song_2"
+        android:layout_marginTop="37dp"
+        android:textSize="17dp"
+        android:layout_marginLeft="61dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_song_3"
+        android:layout_marginLeft="61dp"
+        android:text="Sơn Tùng M-TP"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_song_4"
+        android:layout_marginLeft="61dp"
+        android:text="Sơn Tùng M-TP"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_song_5"
+        android:layout_marginLeft="61dp"
+        android:text="Sơn Tùng M-TP"/>
+
+    <TextView
+        android:id="@+id/name_song_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hãy Trao Cho Anh"
+        android:layout_below="@id/name_song_3"
+        android:layout_marginTop="37dp"
+        android:textSize="17dp"
+        android:layout_marginLeft="61dp"
+        />
+
+    <TextView
+        android:id="@+id/name_song_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THERE’S NO ONE AT ALL"
+        android:layout_below="@id/name_song_4"
+        android:layout_marginTop="37dp"
+        android:textSize="17dp"
+        android:layout_marginLeft="61dp"
+        />
+
+
+
+
+</RelativeLayout>
