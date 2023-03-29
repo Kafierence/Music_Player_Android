@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.ResultActivity">
 
     <EditText
         android:id="@+id/search_result"
@@ -19,7 +19,7 @@
         android:layout_below="@id/search_result"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:background="@color/grey"
+
         android:alpha="0.5"/>
     <ImageView
         android:layout_marginTop="3dp"
@@ -196,14 +196,15 @@
         android:text="Album Skyler"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="40dp"/>
+
     <RelativeLayout
         android:id="@+id/song1"
-        android:alpha="0.1"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_below="@id/name1"
-        android:background="@color/Grey"
         android:layout_marginTop="30dp"
-        android:layout_height="50dp"/>
+        android:alpha="0.1"
+        android:background="@color/Grey" />
     <RelativeLayout
         android:id="@+id/song2"
         android:alpha="0.1"
@@ -238,15 +239,16 @@
         android:background="@color/Grey"
         android:layout_marginTop="12dp"
         android:layout_height="50dp"/>
+
     <TextView
         android:id="@+id/name_song_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chạy Ngay Đi"
-        android:textSize="18dp"
         android:layout_below="@id/name1"
+        android:layout_marginLeft="61dp"
         android:layout_marginTop="33dp"
-        android:layout_marginLeft="61dp"/>
+        android:text="Chạy Ngay Đi"
+        android:textSize="18dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

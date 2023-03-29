@@ -8,6 +8,10 @@
     <string name="RECORD">Record</string>
     <string name="GET_START">Get Started</string>
     <string name="LIBRARY">Library</string>
+    <string name="TOP_SONG">Top Song</string>
+    <string name="SLOGAN_MUSIC">Get better recommendations the more you listen</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
