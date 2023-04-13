@@ -1,7 +1,9 @@
 package hcmute.edu.vn.music_player.Activity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -9,7 +11,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import hcmute.edu.vn.music_player.MyService;
 import hcmute.edu.vn.music_player.R;
+import hcmute.edu.vn.music_player.Song;
 import hcmute.edu.vn.music_player.databinding.ActivityPlayMediaBinding;
 
 public class PlayMedia extends AppCompatActivity implements View.OnClickListener{
@@ -17,7 +21,6 @@ public class PlayMedia extends AppCompatActivity implements View.OnClickListener
     TextView tvTime, tvDuration;
     SeekBar seekBarTime, seekBarVolume;
     Button btnPlay;
-
     MediaPlayer musicPlayer;
 
 
@@ -27,7 +30,6 @@ public class PlayMedia extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_play_media);
 
         // hide the actionbar
-
 
         tvTime = findViewById(R.id.tvTime);
         tvDuration = findViewById(R.id.tvDuration);
@@ -44,6 +46,14 @@ public class PlayMedia extends AppCompatActivity implements View.OnClickListener
         tvDuration.setText(duration);
 
         btnPlay.setOnClickListener(this);
+
+//        btnPlay.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                clickStartService();
+//            }
+//        });
+
 
         seekBarVolume.setProgress(50);
         seekBarVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -112,6 +122,26 @@ public class PlayMedia extends AppCompatActivity implements View.OnClickListener
 
     } // end main
 
+    private void clickStartService() {
+        Song song = new Song("Big city boy", "ThienZ", R.drawable.city_boi, R.raw.m2);
+
+
+        Intent intent = new Intent(this, MyService.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("object_song", song);
+        intent.putExtras(bundle);
+
+        //intent.putExtra("key_data_intent", edtDataIntent.getText().toString().trim());
+        startService(intent);
+
+    }
+
+    private void clickStopService() {
+        Intent intent = new Intent(this, MyService.class);
+
+        stopService(intent);
+    }
+
 
     public String millisecondsToString(int time) {
         String elapsedTime = "";
@@ -133,10 +163,14 @@ public class PlayMedia extends AppCompatActivity implements View.OnClickListener
                 // is playing
                 musicPlayer.pause();
                 btnPlay.setBackgroundResource(R.drawable.ic_play);
+                Log.e("Dung", "Dang dung");
+                //clickStopService();
             } else {
                 // on pause
                 musicPlayer.start();
                 btnPlay.setBackgroundResource(R.drawable.ic_pause);
+                //clickStopService();
+                Log.e("chay", "dang chay");
             }
         }
     }
