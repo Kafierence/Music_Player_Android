@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
@@ -51,30 +52,61 @@ public class RegistrationActivity extends AppCompatActivity {
         String userEmail = email.getText().toString();
         String userPassword = password.getText().toString();
         if (TextUtils.isEmpty(userName)){
-            Toast.makeText(RegistrationActivity.this, "Enter Name!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(RegistrationActivity.this, "Enter Name!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(RegistrationActivity.this)
+                    .setTitle("Registration")
+                    .setMessage("Enter Name!")
+                    .setPositiveButton("OK", null)
+                    .show();
+
         }
         if (TextUtils.isEmpty(userEmail)){
-            Toast.makeText(RegistrationActivity.this, "Enter Email Address!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(RegistrationActivity.this, "Enter Email Address!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(RegistrationActivity.this)
+                    .setTitle("Registration")
+                    .setMessage("Enter Email Address!")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         if (TextUtils.isEmpty(userPassword)){
-            Toast.makeText(RegistrationActivity.this, "Enter Password!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(RegistrationActivity.this, "Enter Password!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(RegistrationActivity.this)
+                    .setTitle("Registration")
+                    .setMessage("Enter Password!")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         if (userPassword.length()<6){
-            Toast.makeText(RegistrationActivity.this, "Password to short, Enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(RegistrationActivity.this, "Password to short, Enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(RegistrationActivity.this)
+                    .setTitle("Registration")
+                    .setMessage("Password to short, Enter minimum 6 characters!")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         auth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(RegistrationActivity.this, "Successfully Register", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(RegistrationActivity.this, "Successfully Register", Toast.LENGTH_SHORT).show();
+                    new AlertDialog.Builder(RegistrationActivity.this)
+                            .setTitle("Registration")
+                            .setMessage("Successfully Register,Login Now!")
+                            .setPositiveButton("OK", null)
+                            .show();
                     startActivity(new Intent(RegistrationActivity.this,LoginActivity.class));
                 }
                 else {
-                    Toast.makeText(RegistrationActivity.this, "Registration Failed"+task.getException(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                    new AlertDialog.Builder(RegistrationActivity.this)
+                            .setTitle("Registration")
+                            .setMessage("Registration Failed")
+                            .setPositiveButton("OK", null)
+                            .show();
                 }
             }
         });

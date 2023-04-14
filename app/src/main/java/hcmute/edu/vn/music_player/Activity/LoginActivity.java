@@ -1,5 +1,6 @@
 package hcmute.edu.vn.music_player.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -38,26 +40,72 @@ public class LoginActivity extends AppCompatActivity {
         String userPassword = password.getText().toString();
 
         if (TextUtils.isEmpty(userEmail)) {
-            Toast.makeText(LoginActivity.this, "Enter Email Address!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(LoginActivity.this, "Enter Email Address!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(LoginActivity.this)
+                    .setTitle("Warning!")
+                    .setMessage("Enter Email Address!")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         if (TextUtils.isEmpty(userPassword)) {
-            Toast.makeText(LoginActivity.this, "Enter Password!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(LoginActivity.this, "Enter Password!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(LoginActivity.this)
+                    .setTitle("Warning!")
+                    .setMessage("Enter Password!")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         if (userPassword.length() < 6) {
-            Toast.makeText(LoginActivity.this, "Password to short, Enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
-            return;
+//            Toast.makeText(LoginActivity.this, "Password to short, Enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+//            return;
+            new AlertDialog.Builder(LoginActivity.this)
+                    .setTitle("Warning!")
+                    .setMessage("Password to short, Enter minimum 6 characters!")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         auth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(LoginActivity.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LoginActivity.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
+                    new AlertDialog.Builder(LoginActivity.this)
+                            .setTitle("Login")
+                            .setMessage("Logged in successfully!")
+                            .setPositiveButton("OK", null)
+                            .show();
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 }
                 else{
-                    Toast.makeText(LoginActivity.this, "Error!" + task.getException(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LoginActivity.this,
+//                            "Invalid username or password. Please try again!" ,
+//                            Toast.LENGTH_SHORT).show();
+//                    new AlertDialog.Builder(LoginActivity.this)
+//                            .setTitle("Error")
+//                            .setMessage("Invalid username or password. Please try again!")
+//                            .setPositiveButton("OK", null)
+//                            .show();
+                    new AlertDialog.Builder(LoginActivity.this)
+                            .setTitle("Error")
+                            .setMessage("The account or password is incorrect, please check the account or password again!! If you don't have an account, you can click register now! ")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    // Do nothing, just close the dialog
+                                }
+                            })
+                            .setNegativeButton("Register NOW", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+                                    startActivity(intent);
+                                }
+                            })
+                            .show();
+
+
                 }
             }
         });
