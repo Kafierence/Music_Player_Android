@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
@@ -14,21 +13,5 @@
         android:icon="@drawable/ic_book"
         android:title="@string/LIBRARY" />
 
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
-        android:title="@string/HOME" />
-    <item
-        android:id="@+id/nav_search"
-        android:icon="@drawable/ic_search"
-        android:title="@string/SEARCH" />
-    <item
-        android:id="@+id/nav_library"
-        android:icon="@drawable/ic_book"
-        android:title="@string/LIBRARY" />
 
->>>>>>> 16815498c9261252710e24b6cb76b8178f6697e8
 </menu>

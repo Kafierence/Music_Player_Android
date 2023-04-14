@@ -14,6 +14,7 @@ import hcmute.edu.vn.music_player.Fragment.HomeFragment;
 import hcmute.edu.vn.music_player.Fragment.LibraryFragment;
 import hcmute.edu.vn.music_player.Fragment.SearchFragment;
 import hcmute.edu.vn.music_player.R;
+import hcmute.edu.vn.music_player.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     LibraryFragment libraryFragment = new LibraryFragment();
     SearchFragment searchFragment = new SearchFragment();
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_wrapper, homeFragment).commit();
         bottomNavigationView = findViewById(R.id.bottom_navigation);

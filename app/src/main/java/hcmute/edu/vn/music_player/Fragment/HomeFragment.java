@@ -9,16 +9,25 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import hcmute.edu.vn.music_player.R;
+import hcmute.edu.vn.music_player.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
+    FragmentHomeBinding binding;
 
-    public HomeFragment() {
-        // Required empty public constructor
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        return view;
     }
 }
