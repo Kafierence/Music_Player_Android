@@ -101,11 +101,11 @@ public class Album implements Serializable {
         this.albumId = albumId;
     }
 
-    public hcmute.edu.vn.admin_music_player_g6.Models.Artist getArtist() {
+    public hcmute.edu.vn.music_player.Models.Artist getArtist() {
         return Artist;
     }
 
-    public void setArtist(hcmute.edu.vn.admin_music_player_g6.Models.Artist artist) {
+    public void setArtist(hcmute.edu.vn.music_player.Models.Artist artist) {
         Artist = artist;
     }
 

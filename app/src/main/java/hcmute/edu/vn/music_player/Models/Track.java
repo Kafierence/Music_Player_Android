@@ -22,8 +22,8 @@ public class Track implements Serializable {
     private String tGenre;
     private String image;
     private Date tReleaseDate;
-    private hcmute.edu.vn.admin_music_player_g6.Models.Album tAlbum;
-    private hcmute.edu.vn.admin_music_player_g6.Models.Artist tArtist;
+    private hcmute.edu.vn.music_player.Models.Album tAlbum;
+    private hcmute.edu.vn.music_player.Models.Artist tArtist;
     private String artistId;
     private String albumId;
     private String artistName;
@@ -106,19 +106,19 @@ public class Track implements Serializable {
         this.key = key;
     }
 
-    public hcmute.edu.vn.admin_music_player_g6.Models.Album gettAlbum() {
+    public hcmute.edu.vn.music_player.Models.Album gettAlbum() {
         return tAlbum;
     }
 
-    public void settAlbum(hcmute.edu.vn.admin_music_player_g6.Models.Album tAlbum) {
+    public void settAlbum(hcmute.edu.vn.music_player.Models.Album tAlbum) {
         this.tAlbum = tAlbum;
     }
 
-    public hcmute.edu.vn.admin_music_player_g6.Models.Artist gettArtist() {
+    public hcmute.edu.vn.music_player.Models.Artist gettArtist() {
         return tArtist;
     }
 
-    public void settArtist(hcmute.edu.vn.admin_music_player_g6.Models.Artist tArtist) {
+    public void settArtist(hcmute.edu.vn.music_player.Models.Artist tArtist) {
         this.tArtist = tArtist;
     }
 
